@@ -27,11 +27,12 @@ You can manually download the archive and put its content in the _app/code/Enric
 composer require enrico69/magento2-customer-activation
 ```
 
-Whatever the way you choosed, activate the module and then run the following command:
+Then activate the module, reindex and flush the cache using the following commands (from the root of your project):
 
 ```
-php magento indexer:reindex
-php magento cache:clean
+php bin/magento module:enable Enrico69_Magento2CustomerActivation   
+php bin/magento indexer:reindex
+php bin/magento cache:clean
 ```
 
 ## Configuration
