@@ -18,7 +18,7 @@ class Activation extends Column
     {
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as &$item) {
-                $item['account_is_active'] = $item['account_is_active'] === '1' ? __('Yes') : __('No');
+                $item['account_is_active'] = isset($item['account_is_active'] && $item['account_is_active'] === '1' ? __('Yes') : __('No');
             }
         }
 
